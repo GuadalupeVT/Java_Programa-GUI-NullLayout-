@@ -4,7 +4,7 @@ import javax.swing.*;
 class VentanaPrincipal extends JFrame{
 	public VentanaPrincipal(){
 		getContentPane().setLayout(null);
-		setSize(700, 650);
+		setSize(710, 650);
 		setTitle("Ventana Principal");	
 		//setLocationRelativeTo(null);
 		setDefaultCloseOperation(EXIT_ON_CLOSE); 
@@ -142,8 +142,9 @@ class VentanaPrincipal extends JFrame{
 		panel2.add(label10);
 		
 		JPanel panel3=new JPanel();
-		panel3.setPreferredSize(new Dimension(360,200));
-		panel3.setAutoscrolls(true);
+		panel3.setPreferredSize(new Dimension(380,250));
+		//panel3.setAutoscrolls(true);
+		panel3.setBackground(Color.WHITE);
 		
 		JLabel label11=new JLabel("                                             *");
 		label11.setFont(fuente);
@@ -159,7 +160,7 @@ class VentanaPrincipal extends JFrame{
 		label13.setFont(fuente);
 		panel3.add(label13);
 		  
-		JTextField cajaEmail = new JTextField(30);
+		JTextField cajaEmail = new JTextField("                                                                                                            *",30);
 		panel3.add(cajaEmail);
 		
 		JLabel label14=new JLabel("First Name                                                                  ");
@@ -180,10 +181,9 @@ class VentanaPrincipal extends JFrame{
 		panel3.add(btn1,BorderLayout.PAGE_START);
 		
 		panel3.add(new JLabel("                                                                           "));
-		
-		
-		
-		panel2.add(panel3);
+		JScrollPane scroll = new JScrollPane(panel3);
+		panel2.add(scroll);
+		//panel2.add(panel3);
 		add(panel2);
 	}
 	
