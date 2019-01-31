@@ -6,7 +6,7 @@ class VentanaPrincipal extends JFrame{
 		getContentPane().setLayout(null);
 		setSize(710, 650);
 		setTitle("Ventana Principal");	
-		//setLocationRelativeTo(null);
+		setLocationRelativeTo(null);
 		setDefaultCloseOperation(EXIT_ON_CLOSE); 
 		setVisible(true);
 		
@@ -31,13 +31,13 @@ class VentanaPrincipal extends JFrame{
 		label3.setFont(fuente);
 		panel1.add(label3);
 		
-		JCheckBox caja1= new JCheckBox("a little for your form                                   ");
+		JCheckBox caja1= new JCheckBox("a little for your form                                        ");
 		caja1.setAlignmentX(0);
 		caja1.setBackground(Color.WHITE);
 		caja1.setFont(fuente);
 		panel1.add(caja1);
 		
-		JTextArea areaTexto1 =new JTextArea("Subscribe to our mailing list",1,25);
+		JTextArea areaTexto1 =new JTextArea("Subscribe to our mailing list",1,27);
 		areaTexto1.setAlignmentX(SwingConstants.LEFT);
 		areaTexto1.setLineWrap(true);
 		areaTexto1.setWrapStyleWord(true);
@@ -86,11 +86,11 @@ class VentanaPrincipal extends JFrame{
 		panel1.add(new JLabel("                                                                         "));
 		
 		
-		JLabel label7 =new JLabel("Set form width                                             ");
+		JLabel label7 =new JLabel("Set form width                                                   ");
 		label7.setFont(fuente);
 		panel1.add(label7);
 		
-		JTextArea areaTexto2 =new JTextArea("",1,25);
+		JTextArea areaTexto2 =new JTextArea("",1,27);
 		areaTexto2.setAlignmentX(SwingConstants.LEFT);
 		areaTexto2.setLineWrap(true);
 		areaTexto2.setWrapStyleWord(true);
@@ -185,6 +185,12 @@ class VentanaPrincipal extends JFrame{
 		panel2.add(scroll);
 		//panel2.add(panel3);
 		add(panel2);
+		
+		JLabel label16 = new JLabel("Copy/Paste onto your site                                                   ");
+		label16.setFont(new Font("Arial",523,16));
+		label16.setAlignmentX(LEFT_ALIGNMENT);
+		panel2.add(label16);
+		
 	}
 	
 }
