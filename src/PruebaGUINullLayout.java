@@ -191,6 +191,12 @@ class VentanaPrincipal extends JFrame{
 		label16.setAlignmentX(LEFT_ALIGNMENT);
 		panel2.add(label16);
 		
+		JTextArea copy=new JTextArea(" <iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/1w7OgIMMRc4\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe> ",10,34);
+		copy.setLineWrap(true);
+		copy.setWrapStyleWord(true);
+		copy.setBorder(BorderFactory.createLineBorder(Color.DARK_GRAY, 1));
+		add(new JScrollPane(copy));
+		panel2.add(copy);
 	}
 	
 }
