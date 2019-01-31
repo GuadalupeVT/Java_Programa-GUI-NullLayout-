@@ -159,6 +159,8 @@ class VentanaPrincipal extends JFrame {
 		label13.setFont(fuente);
 		panel3.add(label13);
 
+		JFormattedTextField x= new JFormattedTextField();
+		//x.setV
 		JTextField cajaEmail = new JTextField(
 				"                                                                                                            *",
 				30);
