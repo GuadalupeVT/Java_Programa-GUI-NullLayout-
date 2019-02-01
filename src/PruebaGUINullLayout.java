@@ -1,5 +1,8 @@
 import java.awt.*;
+import java.text.ParseException;
+
 import javax.swing.*;
+import javax.swing.text.MaskFormatter;
 
 class VentanaPrincipal extends JFrame {
 	public VentanaPrincipal() {
@@ -159,13 +162,20 @@ class VentanaPrincipal extends JFrame {
 		label13.setFont(fuente);
 		panel3.add(label13);
 
-		JFormattedTextField x= new JFormattedTextField();
-		//x.setV
-		JTextField cajaEmail = new JTextField(
-				"                                                                                                            *",
-				30);
-		panel3.add(cajaEmail);
-
+		//formatoA
+		try {
+			MaskFormatter mfCC = new MaskFormatter("##################################@gmail.com                                                     ");
+			mfCC.setPlaceholderCharacter(' ');
+			JFormattedTextField cajaEmail=new JFormattedTextField(mfCC);
+			cajaEmail.setSize(50, 1);
+			cajaEmail.setEditable(true);
+			panel3.add(cajaEmail);
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	
 		JLabel label14 = new JLabel("First Name                                                                  ");
 		label14.setFont(fuente);
 		panel3.add(label14);
